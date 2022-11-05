@@ -14,7 +14,7 @@ async def start_command(message: types.Message):
     user_id = message.from_id
     await bot.send_message(
         user_id, 
-        f'ID of original message sender: ```{user_id}```', 
+        f'your chat id: ```{user_id}```', 
         reply_to_message_id=message.message_id)
 
 @dp.message_handler(lambda message: message.forward_from)

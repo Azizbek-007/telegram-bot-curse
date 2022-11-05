@@ -5,12 +5,12 @@ from transliterate import to_cyrillic, to_latin
 logging.basicConfig(level=logging.INFO)
 
 # initialization
-bot = Bot(token='5766145710:AAHHaHPHM9DKaBaU6z77R5QmD_qLQsGyIYs', parse_mode='markdown')
+bot = Bot(token='5630487322:AAFmBSYB3sJdcAFbsxkDD86dIxRRBgzdwMc', parse_mode='markdown')
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-    await message.answer('Assalawma aleykum botqa xosh kelipsiz bul bot arqali siz latin alipesindegi sozni kirilga ayki teskeri qiliwga boladi')
+    await message.answer('Привет, привет. Я перевод кириллицу на латиницу или наоборот. Введите текст...')
 
 @dp.message_handler()
 async def echo(message: types.Message):
